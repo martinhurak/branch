@@ -1,0 +1,56 @@
+ štruktura xpath 
+ 
+  "price": "//li[@class='item-price']/text() | //span[@class='item-price item-price-text']/text()",
+
+  Používanie // na začiatku výrazu znamená, že vyhľadávanie bude začínať od koreňového elementu dokumentu.
+  elementy oddelujem / 
+  taktiež aj hladania ako je napr text zadavam rovnako 
+
+//li[@class='item-price']/text(): Tento výraz vyhľadá všetky li elementy, ktoré majú atribút class s hodnotou "item-price", a získa ich textový obsah.
+
+|: Toto je operátor union (zjednotenia), ktorý kombinuje výsledky dvoch samostatných výrazov. (or)
+
+//span[@class='item-price item-price-text']/text(): Tento výraz vyhľadá všetky span elementy, ktoré majú atribút class s hodnotou "item-price item-price-text", a získa ich textový obsah.
+
+
+za @ pridavam čo hladam jedna sa bežne o atributy ako napr: 
+@src=
+@class=
+@href=
+@itemprop=
+
+
+//musim použiť camel_case na subory 
+//aj na premenne 
+
+
+
+// scraping znamena hotove 
+
+
+!praca 
+
+prerob config na xpath 
+
+
+// moj branch prerob len čisto na xpath 
+// do config budu hotove scrapy 
+
+až po tycht 200 strankch 
+// do databazi musia isť spravne data 
+
+// ciže bude sa odomna chcieť že 
+nolizne pismo norlizovane 
+
+bude všetko jednotne 
+
+po tych 200 strankach 
+
+pozrieť pandas 
+
+// real via je už spraveny 
+// back ofice robim 
+// real soft robim
+
+// pribežne robiť commity 
+// 

@@ -1,0 +1,74 @@
+[
+    {
+        "name": "remax",
+        "start_url": "https://remax-slovakia.sk/reality/vyhladavanie",
+        "page_selectors": {
+            "hrefs": "a.image-link::attr(href)",
+            "next_page": "a[rel='next']::attr(href)"
+        },
+        "item_selectors": {
+            "title": "h1[itemprop='name']::text",
+            "img_url": "div.ad-image a::attr(href)",
+            "price": "tr td:contains('Cena') + td::text",
+            "district": "tr td:contains('Mesto') + td::text",
+            "street": "tr td:contains('Ulica') + td::text",
+            "property_size": "tr td:contains('Celková plocha') + td::text,tr td:contains('Úžitková plocha') + td::text"
+        }
+    },
+    {
+        "name": "tureality",
+        "start_url": "https://www.tureality.sk/ponuka",
+        "page_selectors": {
+            "hrefs": "li.inzerat a::attr(href)",
+            "next_page": "a.next.btn.btn-orange::attr(href)"
+        },
+        "item_selectors": {
+            "title": "h1.blue-box-header::text",
+            "img_url": "#img-main img::attr(src)",
+            "price": "span[data-content='price'] span::text",
+            "street": "li:contains('Ulica')::text",
+            "district": "li:contains('Mesto')::text",
+            "property_type": "li:contains('Predaj')::text",
+            "property_size": "li:contains('plocha') span::text",
+            "property_condition": "li:contains('Stav') span::text"
+        }
+    },
+    {
+        "name": "archeus",
+        "start_url": "https://www.archeus.sk/ponuky/",
+        "page_selectors": {
+            "hrefs": "a[href*=nehnutelnost]::attr(href)",
+            "next_page": "a.sip-right::attr(href)"
+        },
+        "item_selectors": {
+            "title": "h1::text",
+            "img_url": "a.image.galeryImage.FP_gal::attr(href)",
+            "price": "span.price::text",
+            "district": "tr td:contains('Obec:') + td::text",
+            "street": "tr td:contains('Ulica:') + td::text",
+            "category": "tr td:contains('Typ nehnuteľnosti:') + td::text",
+            "property_type": "tr td:contains('Počet izieb:') + td::text",
+            "property_size": "tr td:contains('Rozloha:') + td::text,tr td:contains('Obytná plocha:') + td::text,tr td:contains('Výmera pozemku:') + td::text",
+            "property_condition": "tr td:contains('Stav nehnuteľnosti:') + td::text"
+        }
+    },
+    {
+        "name": "ipbreal",
+        "start_url": "https://ipbreal.sk/ponuka",
+        "page_selectors": {
+            "hrefs": "a[href*=nehnutelnost]::attr(href)",
+            "next_page": "a.fwd1::attr(href)"
+        },
+        "item_selectors": {
+            "title": "h1::text",
+            "img_url": "div.photos.col-lg-8.col-md-8.col-sm-8.col-xs-12 a::attr(href)",
+            "price": "td.cena.cenavalue div::text",
+            "district": "tr td.detail_label:contains('Obec:') + td.detail_value::text",
+            "street": "tr td.detail_label:contains('Ulica:') + td.detail_value::text",
+            "category": "tr td.detail_label:contains('Kategória:') + td.detail_value::text",
+            "property_type": "tr td.detail_label:contains('Druh:') + td.detail_value::text",
+            "property_size": "tr td.detail_label:contains('Podlahová plocha:') + td.detail_value::text,",
+            "property_condition": "tr td.detail_label:contains('Stav objektu:') + td.detail_value::text"
+        }
+    }
+]

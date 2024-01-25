@@ -1,0 +1,7 @@
+stranka tu reality ma obrazok ako video 
+
+archus ma vela obrazkou ako javascript 
+- mam možnost bud ziskať miniaturu 
+ "//a[@class='image galeryImage FP_gal']/img/@src",
+ alebo cely obrazok ale velka čast bude js 
+  "//a[@class='image galeryImage FP_gal']/@src",

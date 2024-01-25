@@ -1,0 +1,21 @@
+[
+    {
+        "name": "ipbreal",
+        "start_url": "https://ipbreal.sk/ponuka",
+        "page_selectors": {
+            "hrefs": "a[href*=nehnutelnost]::attr(href)",
+            "next_page": "a.fwd1::attr(href)"
+        },
+        "item_selectors": {
+            "title": "h1::text",
+            "img_url": "div.photos.col-lg-8.col-md-8.col-sm-8.col-xs-12 a::attr(href)",
+            "price": "td.cena.cenavalue div::text",
+            "district": "tr td.detail_label:contains('Obec:') + td.detail_value::text",
+            "street": "tr td.detail_label:contains('Ulica:') + td.detail_value::text",
+            "category": "tr td.detail_label:contains('Kategória:') + td.detail_value::text",
+            "property_type": "tr td.detail_label:contains('Druh:') + td.detail_value::text",
+            "property_size": "tr td.detail_label:contains('Podlahová plocha:') + td.detail_value::text",
+            "property_condition": "tr td.detail_label:contains('Stav objektu:') + td.detail_value::text"
+        }
+    }
+]

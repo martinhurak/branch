@@ -1,0 +1,192 @@
+[
+{
+    "name": "beavukusic",
+    "start_url": "https://www.beavukusic.sk/nehnutelnosti",
+    "page_selectors": {
+        "hrefs": "//article//a/@href",
+        "next_page": "//a[contains(@class, 'control-arrow-right')]/@href"
+    },
+    "item_selectors": {
+        "title": "//h1/text()",
+        "img_url": "//div[@class='item text-center']//a/@href",
+        "price": " //div[@class='pmc_price']/text() | //i[@class='fa fa-exclamation-triangle']/following-sibling::text()[1] ",
+        "district": "//th[contains(text(), 'Obec:')]/following-sibling::td/text()",
+        "street": "//th[contains(text(), 'Mestsk')]/following-sibling::td/text() | //th[contains(text(), 'Ulica')]/following-sibling::td/text()",
+        "category": "//th[contains(text(), 'Typ ')]/following-sibling::td/text()",
+        "property_type": "//th[contains(text(), 'Druh:')]/following-sibling::td/text()",
+        "property_size": "//div[contains(text(),'plocha:')]/following-sibling::div/text()",
+        "property_condition": "//div[contains(text(),'Stav:')]/following-sibling::div/text()"
+    }
+},
+{
+    "name": "dmpdreal",
+    "start_url": "https://dmpdreal.sk/ponuka",
+    "page_selectors": {
+        "hrefs": "//div[@class='item_info_right']/a/@href",
+        "next_page": "//a[@class='fwd1']/@href"
+    },
+    "item_selectors": {
+        "title": "//h1/text()",
+        "img_url": "//div[@class='photos col-lg-8 col-md-7 col-sm-7 col-xs-12']/a/@href",
+        "price": "//td[@class='cena cenavalue']/div/text()",
+        "district": "//tr/td[@class='detail_label'][contains(text(), 'Obec:')]/following-sibling::td[@class='detail_value']/text()",
+        "street": "//tr/td[@class='detail_label'][contains(text(), 'Ulica:')]/following-sibling::td[@class='detail_value']/text()",
+        "category": "//tr/td[@class='detail_label'][contains(text(), 'Druh:')]/following-sibling::td[@class='detail_value']/text() ",
+        "property_type": "//tr/td[@class='detail_label'][contains(text(), 'Kateg')]/following-sibling::td[@class='detail_value']/text()",
+        "property_size": "//tr/td[@class='detail_label'][contains(text(), 'plocha:') or contains(text(), 'Plocha ') or contains(text(), 'Pozemok ')]/following-sibling::td[@class='detail_value']/text()",
+        "property_condition": "//tr/td[@class='detail_label'][contains(text(), 'Stav objektu:')]/following-sibling::td[@class='detail_value']/text()"
+    }
+},
+{
+    "name": "kosmosreality",
+    "start_url": "https://www.kosmosreality.sk/nehnutelnosti",
+    "page_selectors": {
+        "hrefs": "//article//a/@href",
+        "next_page": "//a[contains(@class, 'control-arrow-right')]/@href"
+    },
+    "item_selectors": {
+        "title": "//h1/text()",
+        "img_url": "//div[@class='item text-center']//a/@href",
+        "price": " //div[@class='pmc_price']/text() | //i[@class='fa fa-exclamation-triangle']/following-sibling::text()[1] ",
+        "district": "//th[contains(text(), 'Obec:')]/following-sibling::td/text()",
+        "street": "//th[contains(text(), 'Mestsk')]/following-sibling::td/text() | //th[contains(text(), 'Ulica')]/following-sibling::td/text()",
+        "category": "//th[contains(text(), 'Typ ')]/following-sibling::td/text()",
+        "property_type": "//th[contains(text(), 'Druh:')]/following-sibling::td/text()",
+        "property_size": "//div[contains(text(),'plocha:')]/following-sibling::div/text()",
+        "property_condition": "//div[contains(text(),'Stav:')]/following-sibling::div/text()"
+    }
+},
+{
+    "name": "maxreal",
+    "start_url": "https://maxreal.sk/ponuka",
+    "page_selectors": {
+        "hrefs": "//a[@class='nazov']/@href",
+        "next_page": "//a[@class='fwd1']/@href"
+    },
+    "item_selectors": {
+        "title": "//h1/text()",
+        "img_url": "//div[@class='photos']/a/@href",
+        "price": "//div[@class='cenakarta']/text()",
+        "district": "//span[contains(text(), 'Obec')]/following-sibling::text()[1]",
+        "street": "//span[contains(text(), 'Ulica')]/following-sibling::text()[1]",
+        "property_type": "//span[contains(text(), 'Kateg')]/following-sibling::text()[1]",
+        "property_size": "//span[contains(text(), 'Pozemok')]/following-sibling::text()[1] | //span[contains(text(), 'Plocha')]/following-sibling::text()[1] ",
+        "property_condition": "//td[span[contains(text(), 'Stav objektu')]]/following-sibling::td/strong/text()"
+    }
+},
+{
+    "name": "nonstop-reality",
+    "start_url": "https://www.nonstop-reality.sk/nehnutelnosti",
+    "page_selectors": {
+        "hrefs": "//div[@class='realestate boxShadow d-flex align-content-between flex-wrap']/a/@href",
+        "next_page": "//a[@class='control-arrow control-arrow-right']/@href"
+    },
+    "item_selectors": {
+        "title": "//h1/text()",
+        "img_url": "//div[@class='item text-center']//a/@href",
+        "price": "//div[@class='pmc_price']/text()",
+        "district": "//th[contains(text(),'Obec')]/following-sibling::td/text()",
+        "street": "//th[contains(text(),'Ulica')]/following-sibling::td/text()",
+        "category": "//tr/th[contains(text(),'Typ ')]/following-sibling::td/text()",
+        "property_type": "//tr/th[contains(text(),'Druh')]/following-sibling::td/text()",
+        "property_size": "//div[contains(@class,'col-auto') and contains(text(),'plocha:') or contains(text(),'Plocha ')]/following-sibling::div[contains(@class,'col-auto')]/text()",
+        "property_condition": "//div[contains(@class,'col-auto') and contains(text(),'Stav:')]/following-sibling::div[contains(@class,'col-auto')]/text()"
+    }
+},
+{
+    "name": "pgr",
+    "start_url": "https://www.pgr.sk/nehnutelnosti",
+    "page_selectors": {
+        "hrefs": "//article//a/@href",
+        "next_page": "//a[contains(@class, 'control-arrow-right')]/@href"
+    },
+    "item_selectors": {
+        "title": "//h1/text()",
+        "img_url": "//div[@class='item text-center']//a/@href",
+        "price": " //div[@class='pmc_price']/text() | //i[@class='fa fa-exclamation-triangle']/following-sibling::text()[1] ",
+        "district": "//th[contains(text(), 'Obec:')]/following-sibling::td/text()",
+        "street": "//th[contains(text(), 'Mestsk')]/following-sibling::td/text() | //th[contains(text(), 'Ulica')]/following-sibling::td/text()",
+        "category": "//th[contains(text(), 'Typ ')]/following-sibling::td/text()",
+        "property_type": "//th[contains(text(), 'Druh:')]/following-sibling::td/text()",
+        "property_size": "//div[contains(text(),'plocha:')]/following-sibling::div/text()",
+        "property_condition": "//div[contains(text(),'Stav')]/following-sibling::div/text()"
+    }
+},
+{
+    "name": "romdom",
+    "start_url": "https://romdom.sk/ponuka",
+    "page_selectors": {
+        "hrefs": " //div[@class='item_info']/h3/a/@href",
+        "next_page": "//a[@class='fwd1']/@href"
+    },
+    "item_selectors": {
+        "title": "//h1/text()",
+        "img_url": "//div[@class='photos col-lg-8 col-md-8 col-sm-8 col-xs-12']/a/@href",
+        "price": "//td[@class='cena cenavalue']/div/text()",
+        "district": "//tr/td[@class='detail_label'][contains(text(), 'Obec:')]/following-sibling::td[@class='detail_value']/text()",
+        "street": "//tr/td[@class='detail_label'][contains(text(), 'Ulica:')]/following-sibling::td[@class='detail_value']/text()",
+        "category": "//tr/td[@class='detail_label'][contains(text(), 'Druh:')]/following-sibling::td[@class='detail_value']/text() ",
+        "property_type": "//tr/td[@class='detail_label'][contains(text(), 'Kateg')]/following-sibling::td[@class='detail_value']/text()",
+        "property_size": "//tr/td[@class='detail_label'][contains(text(), 'plocha:') or contains(text(), 'Plocha ') or contains(text(), 'Pozemok ')]/following-sibling::td[@class='detail_value']/text()",
+        "property_condition": "//tr/td[@class='detail_label'][contains(text(), 'Stav objektu:')]/following-sibling::td[@class='detail_value']/text()"
+    }
+}
+,
+{
+    "name": "skreality",
+    "start_url": "https://skreality.eu/ponuka",
+    "page_selectors": {
+        "hrefs": "//a[@class='name_ponuka']/@href",
+        "next_page": "//a[@class='fwd1']/@href"
+    },
+    "item_selectors": {
+        "title": "//h1/text()",
+        "img_url": "//div[@class='photos col-lg-12 col-md-12 col-sm-12 col-xs-12']//a/@href",
+        "price": "//div[contains(text(),'Cena:')]/following-sibling::div/text()",
+        "district": "//div[contains(text(),'Obec')]/following-sibling::div/text()",
+        "street": "//div[contains(text(),'Ulica')]/following-sibling::div/text()",
+        "category": "//div[contains(text(),'Druh')]/following-sibling::div/text()",
+        "property_type": "//div[contains(text(),'Kateg')]/following-sibling::div/text()",
+        "property_size": "//div[contains(text(),'plocha')]/following-sibling::div/text() | //div[contains(text(),'Plocha')]/following-sibling::div/text()",
+        "property_condition": "//div[contains(text(),'Stav')]/following-sibling::div/text()"
+    }
+},
+{
+    "name": "tekovska",
+    "start_url": "https://www.tekovska.sk/nehnutelnosti",
+    "page_selectors": {
+        "hrefs": "//div[@class='realestate boxShadow']/a/@href",
+        "next_page": "//a[@class='control-arrow control-arrow-right']/@href"
+    },
+    "item_selectors": {
+        "title": "//h1/text()",
+        "img_url": "//div[@class='item text-center']//a/@href",
+        "price": "//div[@class='pmc_price']/text()",
+        "district": "//th[contains(text(),'Obec')]/following-sibling::td/text()",
+        "street": "//th[contains(text(),'Ulica')]/following-sibling::td/text()",
+        "category": "//tr/th[contains(text(),'Typ ')]/following-sibling::td/text()",
+        "property_size": "//div[contains(@class,'col-auto') and contains(text(),'plocha:') or contains(text(),'Plocha ')]/following-sibling::div[contains(@class,'col-auto')]/text()",
+        "property_condition": "//div[contains(@class,'col-auto') and contains(text(),'Stav:')]/following-sibling::div[contains(@class,'col-auto')]/text()"
+    }
+},   {
+    "name": "virgovic",
+    "start_url": "https://virgovic.sk/",
+    "page_selectors": {
+        "hrefs": "//div[@class='listing-thumb']/a/@href",
+        "next_page": "//noPage"
+    },
+    "item_selectors": {
+        "title": "//div[@class='page-title']/h1/text()",
+        "img_url": "//img[@class='img-fluid']/@src",
+        "price": "//li[@class='item-price']/text() | //span[@class='item-price item-price-text']/text()",
+        "district": "//li[@class='detail-city']/span/text()",
+        "street": "//li[@class='detail-address']/span/text()",
+        "category":"//ul[@class='list-2-cols list-unstyled']/li/strong[contains(text(),'Typ')]/following-sibling::span/text()",
+        "property_size": "//ul[@class='list-2-cols list-unstyled']/li/strong[contains(text(),'plocha')]/following-sibling::span/text() | //ul[@class='list-2-cols list-unstyled']/li/strong[contains(text(),'Plocha ')]/following-sibling::span/text()",
+        "property_condition": "//ul[@class='list-2-cols list-unstyled']/li/strong[contains(text(),'Stav ')]/following-sibling::span/text()"
+    }
+}
+
+]
+
+

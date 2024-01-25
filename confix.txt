@@ -1,0 +1,68 @@
+ "next_page": "//a[@rel='next']/@href"
+
+
+ //tr/td[contains(text(), 'Celkov') or contains(text(), ' plocha')]/following-sibling::td/text()
+
+............
+a[@class='next btn btn-orange']/@href
+.....
+a[@class = 'sip-right']/@href
+
+ [
+     {
+        "name": "remax",
+        "start_url": "https://remax-slovakia.sk/reality/vyhladavanie",
+        "page_selectors": {
+            "hrefs": "//a[@class='image-link']/@href",
+            "next_page": "//a[@rel='next']/@href"
+        },
+        "item_selectors": {
+            "title": "//h1[@itemprop='name']/text()",
+            "img_url": "//div[@class='ad-image']/a/@href",
+            "price": "//span[@itemprop='priceRange']/text()",
+            "district": "//tr/td[contains(text(), 'Mesto')]/following-sibling::td/text()",
+            "street": "//tr/td[contains(text(), 'Ulica')]/following-sibling::td/text()",
+            "property_size": "//tr/td[contains(text(), 'Celkov') or contains(text(), ' plocha')]/following-sibling::td/text()"
+        }
+    },
+    {
+        "name": "tureality",
+        "start_url": "https://www.tureality.sk/ponuka",
+        "page_selectors": {
+            "hrefs": "//li[@class='inzerat']//a/@href",
+            "next_page": "//a[@class='next btn btn-orange']/@href"
+        },
+
+        "item_selectors": {
+            "title": "//h1[@class='blue-box-header']/text()",
+            "img_url": "//div[@id='img-main']//img/@src", 
+            "price": "//span[@data-content='price']//span/text()",
+            "street": "//strong[contains(text(),'Ulica')]/following-sibling::text()[1]",
+            "district":"//strong[contains(text(),'Mesto')]/following-sibling::text()[1]",
+            "property_type": "//strong[contains(text(),'Predaj')]/following-sibling::text()[1]",
+            "property_size": "//strong[contains(text(),'plocha')]/following-sibling::span/text() | //strong[contains(text(),'pozemku ')]/following-sibling::span/text()",
+            "property_condition": "//strong[contains(text(),'Stav')]/following-sibling::span/text()"
+        }
+    },
+      {
+    "name": "archeus",
+    "start_url": "https://www.archeus.sk/ponuky/",
+    "page_selectors": {
+      "hrefs": "//div[@class = 'itemList']//a[contains(@href, 'nehnutelnost')]/@href",
+      "next_page": "//a[@class = 'sip-right']/@href"
+    },
+    "item_selectors": {
+      "title": "//h1[@class='headerToChange']/text()",
+      "img_url": "//a[@class='image galeryImage FP_gal']/img/@src",
+      "price": "normalize-space(//span[@class='price'])",
+      "district": "//tr/td[contains(text(), 'Obec:')]/following-sibling::td/text()",
+      "street": "//tr/td[contains(text(), 'Ulica:')]/following-sibling::td/text()",
+      "category": "//tr/td[contains(text(), 'Typ')]/following-sibling::td/text()",
+      "property_type": "//tr/td[contains(text(), ' izieb:')]/following-sibling::td/text()",
+      "property_size": "//tr/td[contains(text(), 'Rozloha') or contains(text(), ' plocha') or contains(text(), ' pozemku:')] /following-sibling::td/text()",
+      "property_condition": "//tr/td[contains(text(), 'Stav')]/following-sibling::td/text()"
+    }
+  },
+  
+
+]
